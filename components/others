@@ -1,0 +1,133 @@
+// <template>
+//   <n-space vertical>
+//     <n-form
+//       ref="formRef"
+//       :model="model"
+//       label-placement="left"
+//       :label-width="160"
+//       :style="{
+//         maxWidth: '640px',
+//       }"
+//     >
+
+//       <n-form-item label="Track" path="selectValue">
+//         <n-select
+//           v-model:value="track"
+//           placeholder="Track"
+//           :options="trackOption"
+//         />
+//       </n-form-item>
+
+//       <n-form-item label="Type" path="selectValue">
+//         <n-select
+//           v-model:value="type"
+//           placeholder="Type"
+//           :options="typeOption"
+//         />
+//       </n-form-item>
+
+//       <n-form-item label="Details" path="inputValue">
+//         <n-input
+//           disabled
+//           v-model:value="adDuration"
+//           placeholder="Ad Duration"
+//         />
+//         &nbsp;
+//         <n-input disabled v-model:value="duration" placeholder="duration" />
+//         &nbsp;
+//         <n-input disabled v-model:value="start" placeholder="start" /> &nbsp;
+//         <n-input disabled v-model:value="end" placeholder="end" />
+//       </n-form-item>
+//       <n-form-item label="title" path="inputValue">
+//         <n-input v-model:value="title" placeholder="title" />
+//       </n-form-item>
+//       <n-form-item label="description" path="inputValue">
+//         <n-input v-model:value="description" placeholder="description" />
+//       </n-form-item>
+//       <n-form-item label="download" path="inputValue">
+//         <n-input v-model:value="download" placeholder="download" />
+//       </n-form-item>
+//       <n-form-item label="downloadDescription" path="inputValue">
+//         <n-input
+//           v-model:value="downloadDescription"
+//           placeholder="downloadDescription"
+//         />
+//       </n-form-item>
+//       <n-form-item label="intro" path="inputValue">
+//         <n-input v-model:value="intro" placeholder="intro" />
+//       </n-form-item>
+//       <n-form-item label="speaker" path="inputValue">
+//         <n-input v-model:value="speaker" placeholder="speaker" />
+//       </n-form-item>
+//       <n-form-item label="speakerCompany" path="inputValue">
+//         <n-input v-model:value="speakerCompany" placeholder="speakerCompany" />
+//       </n-form-item>
+//       <n-form-item label="speakerTitle" path="inputValue">
+//         <n-input v-model:value="speakerTitle" placeholder="speakerTitle" />
+//       </n-form-item>
+//       <n-form-item label="sponsor" path="inputValue">
+//         <n-input v-model:value="sponsor" placeholder="sponsor" />
+//       </n-form-item>
+//       <n-form-item label="stream" path="inputValue">
+//         <n-input v-model:value="stream" placeholder="stream" />
+//       </n-form-item>
+//     </n-form>
+//   </n-space>
+// </template>
+
+// <script setup>
+// import { ref, h, onMounted } from "vue";
+// import { NSpace, NSelect, NInput, NForm, NFormItem, NFormItemGi, NGrid } from "naive-ui";
+// const router = useRouter();
+
+// const currentTrack = ref({});
+// const track = ref("");
+// const trackOption = ref([
+//   {
+//     label: "label1",
+//     value: "value1",
+//     disable: false,
+//   },
+//   {
+//     label: "label2",
+//     value: "value2",
+//   },
+// ]);
+// const type = ref("");
+// const typeOption = ref([
+//   {
+//     label: "label1",
+//     value: "value1",
+//   },
+//   {
+//     label: "label2",
+//     value: "value2",
+//   },
+// ]);
+
+// const adDuration = ref(0);
+// const duration = ref(0);
+// const start = ref(0);
+// const end = ref(0);
+
+// const description = ref("");
+// const download = ref("");
+// const downloadDescription = ref("");
+// const intro = ref("");
+// const speaker = ref("");
+// const speakerCompany = ref("");
+// const speakerTitle = ref("");
+// const sponsor = ref("");
+// const stream = ref("");
+// const title = ref("");
+
+// onMounted(() => {
+//   currentTrack.value = router.currentRoute.value.query;
+//   adDuration.value = currentTrack.value.adDuration;
+//   duration.value = currentTrack.value.duration;
+//   start.value = currentTrack.value.start;
+//   end.value = currentTrack.value.end;
+// });
+// </script>
+
+// <style scoped></style>
